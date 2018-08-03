@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/boy/CLionProjects/Tetris/Block.cpp" "/home/boy/CLionProjects/Tetris/cmake-build-debug/CMakeFiles/tetris.dir/Block.cpp.o"
-  "/home/boy/CLionProjects/Tetris/Coordinates.cpp" "/home/boy/CLionProjects/Tetris/cmake-build-debug/CMakeFiles/tetris.dir/Coordinates.cpp.o"
-  "/home/boy/CLionProjects/Tetris/Field.cpp" "/home/boy/CLionProjects/Tetris/cmake-build-debug/CMakeFiles/tetris.dir/Field.cpp.o"
-  "/home/boy/CLionProjects/Tetris/main.cpp" "/home/boy/CLionProjects/Tetris/cmake-build-debug/CMakeFiles/tetris.dir/main.cpp.o"
+  "/home/boy/Tetris/Block.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/tetris.dir/Block.cpp.o"
+  "/home/boy/Tetris/Coordinates.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/tetris.dir/Coordinates.cpp.o"
+  "/home/boy/Tetris/Field.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/tetris.dir/Field.cpp.o"
+  "/home/boy/Tetris/main.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/tetris.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
