@@ -1,0 +1,4 @@
+/snap/clion/34/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/boy/CLionProjects/Tetris
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/boy/CLionProjects/Tetris/cmake-build-debug
