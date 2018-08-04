@@ -90,6 +90,9 @@
 		<Unit filename="/home/boy/Tetris/Block.h">
 			<Option target="tetris"/>
 		</Unit>
+		<Unit filename="/home/boy/Tetris/BlockType.h">
+			<Option target="tetris"/>
+		</Unit>
 		<Unit filename="/home/boy/Tetris/Coordinates.cpp">
 			<Option target="tetris"/>
 		</Unit>
@@ -100,6 +103,9 @@
 			<Option target="tetris"/>
 		</Unit>
 		<Unit filename="/home/boy/Tetris/Field.h">
+			<Option target="tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/MoveType.h">
 			<Option target="tetris"/>
 		</Unit>
 		<Unit filename="/home/boy/Tetris/main.cpp">

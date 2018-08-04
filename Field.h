@@ -6,18 +6,21 @@
 #define UNTITLED_FIELD_H
 
 
-const unsigned int width = 10;
-const unsigned int heigh = 20;
+#include "Block.h"
+
+const unsigned int WIDTH = 10;
+const unsigned int HEIGH = 20;
 
 class Field {
 
 public:
     Field();
-    void changeField()
+    void changeField();
+    void moveBlock(MoveType type);
     ~Field();
 
 private:
-    char field[heigh][width];
+    char field[HEIGH][WIDTH];
     Block *block;
 
 };

@@ -4,10 +4,11 @@
 
 #ifndef UNTITLED_BLOCKTYPES_H
 #define UNTITLED_BLOCKTYPES_H
-enum class BlockTypes{
+enum class BlockType{
     SQUARE,
     STRAIGHT,
     LSHAPED,
     ZSHAPED,
+    enumBlockTypeEnd;
 };
 #endif //UNTITLED_BLOCKTYPES_H

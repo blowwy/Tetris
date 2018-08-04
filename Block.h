@@ -6,15 +6,22 @@
 #define UNTITLED_BLOCK_H
 
 
+#include "Coordinates.h"
+#include "BlockType.h"
+#include "MoveType.h"
+
 class Block {
 
 public:
-    Block();
+    Block(BlockType type);
+    Coordinates * getCoords() const;
+    bool & getCollision();
+    bool getCollision() const;
     void TurnBlock();
-    void moveBlock();
-    ~block();
+    ~Block();
 private:
-
+    Coordinates *coords;
+    bool collision = false;
 };
 
 

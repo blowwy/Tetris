@@ -4,7 +4,15 @@
 
 #include "Coordinates.h"
 
-Coordinates::Coordinates(int x, int y) :x(x), y(y) {}
+Coordinates::Coordinates() {
+    x = 0;
+    y = 0;
+}
+
+void Coordinates::changeCoordinates(int x, int y) {
+    x = x;
+    y = y;
+}
 
 int Coordinates::getx() const {
     return x;

@@ -8,7 +8,8 @@
 
 class Coordinates {
 public:
-    Coordinates(int x,int y);
+    Coordinates();
+    void changeCoordinates(int x,int y);
     int getx() const;
     int & getx();
     int gety() const;
