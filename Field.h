@@ -17,6 +17,7 @@ public:
     Field();
     void changeField();
     void moveBlock(MoveType type);
+    void TurnBlock();
     ~Field();
 
 private:

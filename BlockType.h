@@ -9,6 +9,6 @@ enum class BlockType{
     STRAIGHT,
     LSHAPED,
     ZSHAPED,
-    enumBlockTypeEnd;
+    enumBlockTypeEnd
 };
 #endif //UNTITLED_BLOCKTYPES_H

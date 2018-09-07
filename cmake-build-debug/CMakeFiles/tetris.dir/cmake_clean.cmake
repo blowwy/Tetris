@@ -1,8 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tetris.dir/main.cpp.o"
-  "CMakeFiles/tetris.dir/Field.cpp.o"
-  "CMakeFiles/tetris.dir/Block.cpp.o"
-  "CMakeFiles/tetris.dir/Coordinates.cpp.o"
   "tetris.pdb"
   "tetris"
 )

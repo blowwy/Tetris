@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/34/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/37/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/34/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/37/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/boy/Tetris/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/34/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/37/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/34/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/37/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,98 +111,57 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named tetris
+# Target rules for targets named Tetris
 
 # Build rule for target.
-tetris: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 tetris
-.PHONY : tetris
+Tetris: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Tetris
+.PHONY : Tetris
 
 # fast build rule for target.
-tetris/fast:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/build
-.PHONY : tetris/fast
+Tetris/fast:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/build
+.PHONY : Tetris/fast
 
-Block.o: Block.cpp.o
+#=============================================================================
+# Target rules for targets named Tetris_autogen
 
-.PHONY : Block.o
+# Build rule for target.
+Tetris_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Tetris_autogen
+.PHONY : Tetris_autogen
 
-# target to build an object file
-Block.cpp.o:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Block.cpp.o
-.PHONY : Block.cpp.o
+# fast build rule for target.
+Tetris_autogen/fast:
+	$(MAKE) -f CMakeFiles/Tetris_autogen.dir/build.make CMakeFiles/Tetris_autogen.dir/build
+.PHONY : Tetris_autogen/fast
 
-Block.i: Block.cpp.i
+Tetris_autogen/mocs_compilation.o: Tetris_autogen/mocs_compilation.cpp.o
 
-.PHONY : Block.i
-
-# target to preprocess a source file
-Block.cpp.i:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Block.cpp.i
-.PHONY : Block.cpp.i
-
-Block.s: Block.cpp.s
-
-.PHONY : Block.s
-
-# target to generate assembly for a file
-Block.cpp.s:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Block.cpp.s
-.PHONY : Block.cpp.s
-
-Coordinates.o: Coordinates.cpp.o
-
-.PHONY : Coordinates.o
+.PHONY : Tetris_autogen/mocs_compilation.o
 
 # target to build an object file
-Coordinates.cpp.o:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Coordinates.cpp.o
-.PHONY : Coordinates.cpp.o
+Tetris_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o
+.PHONY : Tetris_autogen/mocs_compilation.cpp.o
 
-Coordinates.i: Coordinates.cpp.i
+Tetris_autogen/mocs_compilation.i: Tetris_autogen/mocs_compilation.cpp.i
 
-.PHONY : Coordinates.i
-
-# target to preprocess a source file
-Coordinates.cpp.i:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Coordinates.cpp.i
-.PHONY : Coordinates.cpp.i
-
-Coordinates.s: Coordinates.cpp.s
-
-.PHONY : Coordinates.s
-
-# target to generate assembly for a file
-Coordinates.cpp.s:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Coordinates.cpp.s
-.PHONY : Coordinates.cpp.s
-
-Field.o: Field.cpp.o
-
-.PHONY : Field.o
-
-# target to build an object file
-Field.cpp.o:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Field.cpp.o
-.PHONY : Field.cpp.o
-
-Field.i: Field.cpp.i
-
-.PHONY : Field.i
+.PHONY : Tetris_autogen/mocs_compilation.i
 
 # target to preprocess a source file
-Field.cpp.i:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Field.cpp.i
-.PHONY : Field.cpp.i
+Tetris_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.i
+.PHONY : Tetris_autogen/mocs_compilation.cpp.i
 
-Field.s: Field.cpp.s
+Tetris_autogen/mocs_compilation.s: Tetris_autogen/mocs_compilation.cpp.s
 
-.PHONY : Field.s
+.PHONY : Tetris_autogen/mocs_compilation.s
 
 # target to generate assembly for a file
-Field.cpp.s:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/Field.cpp.s
-.PHONY : Field.cpp.s
+Tetris_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.s
+.PHONY : Tetris_autogen/mocs_compilation.cpp.s
 
 main.o: main.cpp.o
 
@@ -210,7 +169,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -219,7 +178,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -228,8 +187,35 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/tetris.dir/build.make CMakeFiles/tetris.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+mainwindow.o: mainwindow.cpp.o
+
+.PHONY : mainwindow.o
+
+# target to build an object file
+mainwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/mainwindow.cpp.o
+.PHONY : mainwindow.cpp.o
+
+mainwindow.i: mainwindow.cpp.i
+
+.PHONY : mainwindow.i
+
+# target to preprocess a source file
+mainwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/mainwindow.cpp.i
+.PHONY : mainwindow.cpp.i
+
+mainwindow.s: mainwindow.cpp.s
+
+.PHONY : mainwindow.s
+
+# target to generate assembly for a file
+mainwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/mainwindow.cpp.s
+.PHONY : mainwindow.cpp.s
 
 # Help Target
 help:
@@ -239,19 +225,17 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... tetris"
-	@echo "... Block.o"
-	@echo "... Block.i"
-	@echo "... Block.s"
-	@echo "... Coordinates.o"
-	@echo "... Coordinates.i"
-	@echo "... Coordinates.s"
-	@echo "... Field.o"
-	@echo "... Field.i"
-	@echo "... Field.s"
+	@echo "... Tetris"
+	@echo "... Tetris_autogen"
+	@echo "... Tetris_autogen/mocs_compilation.o"
+	@echo "... Tetris_autogen/mocs_compilation.i"
+	@echo "... Tetris_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... mainwindow.o"
+	@echo "... mainwindow.i"
+	@echo "... mainwindow.s"
 .PHONY : help
 
 

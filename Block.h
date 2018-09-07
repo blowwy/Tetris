@@ -17,7 +17,6 @@ public:
     Coordinates * getCoords() const;
     bool & getCollision();
     bool getCollision() const;
-    void TurnBlock();
     ~Block();
 private:
     Coordinates *coords;
