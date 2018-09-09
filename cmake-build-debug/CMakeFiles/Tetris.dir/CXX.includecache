@@ -6,13 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/boy/Tetris/mainwindow.cpp
-mainwindow.h
-/home/boy/Tetris/mainwindow.h
+/home/boy/Tetris/Images.cpp
+Images.h
+/home/boy/Tetris/Images.h
+
+/home/boy/Tetris/Images.h
+QMap
+-
+QString
+-
+QImage
+-
+
+/home/boy/Tetris/main.cpp
 QtWidgets
 -
-QCoreApplication
+QtCore/QObject
 -
+mainwindow.h
+/home/boy/Tetris/mainwindow.h
+Images.h
+/home/boy/Tetris/Images.h
 
 /home/boy/Tetris/mainwindow.h
 QMainWindow
@@ -24,10 +38,6 @@ QtWidgets/QStackedWidget
 QtWidgets/QHBoxLayout
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QCoreApplication
-qcoreapplication.h
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
 qcoreevent.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
@@ -35,6 +45,10 @@ qcoreevent.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
 qlist.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QMap
+qmap.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins
 qmargins.h
@@ -71,6 +85,10 @@ qsize.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QSizeF
 qsize.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QString
+qstring.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
 qstringlist.h

@@ -8,7 +8,10 @@ set(CMAKE_AUTOUIC ON)
 
 find_package(Qt5Widgets REQUIRED)
 
-add_executable(Tetris main.cpp mainwindow.h mainwindow.cpp)
+set(SOURCE main.cpp mainwindow.cpp Images.cpp)
+set(HEADER mainwindow.h Images.cpp)
+
+add_executable(Tetris main.cpp mainwindow.h mainwindow.cpp Images.cpp)
 
 qt5_use_modules(Tetris Widgets)
 

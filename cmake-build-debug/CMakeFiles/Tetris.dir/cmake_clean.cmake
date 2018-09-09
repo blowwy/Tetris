@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Tetris_autogen.dir/AutogenOldSettings.cmake"
   "CMakeFiles/Tetris.dir/main.cpp.o"
   "CMakeFiles/Tetris.dir/mainwindow.cpp.o"
+  "CMakeFiles/Tetris.dir/Images.cpp.o"
   "CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o"
   "Tetris.pdb"
   "Tetris"

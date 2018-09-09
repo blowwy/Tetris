@@ -35,6 +35,6 @@ void MainWindow::handlePlayButton() {
 }
 
 MainWindow::~MainWindow() {
-    for (int i = 0;i < 2;i++)
-        delete buttons[i];
+    for (auto &button : buttons)
+        delete button;
 }

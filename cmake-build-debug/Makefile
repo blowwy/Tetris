@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/37/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/38/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/37/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/38/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/boy/Tetris/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/37/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/38/bin/cmake/linux/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/37/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/38/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -135,6 +135,33 @@ Tetris_autogen: cmake_check_build_system
 Tetris_autogen/fast:
 	$(MAKE) -f CMakeFiles/Tetris_autogen.dir/build.make CMakeFiles/Tetris_autogen.dir/build
 .PHONY : Tetris_autogen/fast
+
+Images.o: Images.cpp.o
+
+.PHONY : Images.o
+
+# target to build an object file
+Images.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Images.cpp.o
+.PHONY : Images.cpp.o
+
+Images.i: Images.cpp.i
+
+.PHONY : Images.i
+
+# target to preprocess a source file
+Images.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Images.cpp.i
+.PHONY : Images.cpp.i
+
+Images.s: Images.cpp.s
+
+.PHONY : Images.s
+
+# target to generate assembly for a file
+Images.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Images.cpp.s
+.PHONY : Images.cpp.s
 
 Tetris_autogen/mocs_compilation.o: Tetris_autogen/mocs_compilation.cpp.o
 
@@ -227,6 +254,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... Tetris"
 	@echo "... Tetris_autogen"
+	@echo "... Images.o"
+	@echo "... Images.i"
+	@echo "... Images.s"
 	@echo "... Tetris_autogen/mocs_compilation.o"
 	@echo "... Tetris_autogen/mocs_compilation.i"
 	@echo "... Tetris_autogen/mocs_compilation.s"

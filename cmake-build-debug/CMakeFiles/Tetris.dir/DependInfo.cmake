@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/boy/Tetris/Images.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/Images.cpp.o"
   "/home/boy/Tetris/cmake-build-debug/Tetris_autogen/mocs_compilation.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o"
   "/home/boy/Tetris/main.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/main.cpp.o"
   "/home/boy/Tetris/mainwindow.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/mainwindow.cpp.o"
