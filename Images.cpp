@@ -4,6 +4,8 @@
 
 #include "Images.h"
 
+Images pictures = Images();
+
 Images::Images() : loaded(false){}
 
 bool Images::isLoaded() const {
@@ -20,6 +22,7 @@ QImage & Images::get(const QString &imageName){
 void Images::load() {
     if (loaded)
         return;
-    imageStore.insert("background",QImage(":/picutres/tetris_background.jpg"));
+    imageStore.insert("background",QImage("/home/boy/Tetris/pictures/tetris_background.jpg").scaled(300,480));
     loaded = true;
 }
+

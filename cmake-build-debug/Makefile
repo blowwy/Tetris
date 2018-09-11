@@ -163,6 +163,33 @@ Images.cpp.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Images.cpp.s
 .PHONY : Images.cpp.s
 
+MainWidget.o: MainWidget.cpp.o
+
+.PHONY : MainWidget.o
+
+# target to build an object file
+MainWidget.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/MainWidget.cpp.o
+.PHONY : MainWidget.cpp.o
+
+MainWidget.i: MainWidget.cpp.i
+
+.PHONY : MainWidget.i
+
+# target to preprocess a source file
+MainWidget.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/MainWidget.cpp.i
+.PHONY : MainWidget.cpp.i
+
+MainWidget.s: MainWidget.cpp.s
+
+.PHONY : MainWidget.s
+
+# target to generate assembly for a file
+MainWidget.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/MainWidget.cpp.s
+.PHONY : MainWidget.cpp.s
+
 Tetris_autogen/mocs_compilation.o: Tetris_autogen/mocs_compilation.cpp.o
 
 .PHONY : Tetris_autogen/mocs_compilation.o
@@ -257,6 +284,9 @@ help:
 	@echo "... Images.o"
 	@echo "... Images.i"
 	@echo "... Images.s"
+	@echo "... MainWidget.o"
+	@echo "... MainWidget.i"
+	@echo "... MainWidget.s"
 	@echo "... Tetris_autogen/mocs_compilation.o"
 	@echo "... Tetris_autogen/mocs_compilation.i"
 	@echo "... Tetris_autogen/mocs_compilation.s"

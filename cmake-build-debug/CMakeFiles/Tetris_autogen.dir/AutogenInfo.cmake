@@ -10,8 +10,8 @@ set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
 set(AM_BUILD_DIR "/home/boy/Tetris/cmake-build-debug/Tetris_autogen")
 set(AM_INCLUDE_DIR "include")
 # Files
-set(AM_SOURCES "/home/boy/Tetris/Images.cpp;/home/boy/Tetris/main.cpp;/home/boy/Tetris/mainwindow.cpp")
-set(AM_HEADERS "/home/boy/Tetris/mainwindow.h")
+set(AM_SOURCES "/home/boy/Tetris/Images.cpp;/home/boy/Tetris/MainWidget.cpp;/home/boy/Tetris/main.cpp;/home/boy/Tetris/mainwindow.cpp")
+set(AM_HEADERS "/home/boy/Tetris/MainWidget.h;/home/boy/Tetris/mainwindow.h")
 set(AM_SETTINGS_FILE "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris_autogen.dir/AutogenOldSettings.txt")
 # Qt
 set(AM_QT_VERSION_MAJOR "5")

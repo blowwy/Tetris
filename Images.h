@@ -20,4 +20,6 @@ private:
     bool loaded;
 };
 
+extern Images pictures;
+
 #endif //TETRIS_IMAGES_H

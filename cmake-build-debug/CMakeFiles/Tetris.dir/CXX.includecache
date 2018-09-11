@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/boy/Tetris/Images.cpp
-Images.h
-/home/boy/Tetris/Images.h
-
 /home/boy/Tetris/Images.h
 QMap
 -
@@ -18,25 +14,43 @@ QString
 QImage
 -
 
-/home/boy/Tetris/main.cpp
-QtWidgets
--
-QtCore/QObject
--
-mainwindow.h
-/home/boy/Tetris/mainwindow.h
+/home/boy/Tetris/MainWidget.cpp
+MainWidget.h
+/home/boy/Tetris/MainWidget.h
 Images.h
 /home/boy/Tetris/Images.h
+QtWidgets
+-
+QCoreApplication
+-
+
+/home/boy/Tetris/MainWidget.h
+QtWidgets/QWidget
+-
+QPushButton
+-
+QtWidgets/QHBoxLayout
+-
+
+/home/boy/Tetris/mainwindow.cpp
+mainwindow.h
+/home/boy/Tetris/mainwindow.h
+QtWidgets
+-
+QCoreApplication
+-
 
 /home/boy/Tetris/mainwindow.h
 QMainWindow
 -
 QPushButton
 -
-QtWidgets/QStackedWidget
--
-QtWidgets/QHBoxLayout
--
+MainWidget.h
+/home/boy/Tetris/MainWidget.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QCoreApplication
+qcoreapplication.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
 qcoreevent.h
@@ -3069,10 +3083,6 @@ qpushbutton.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QScrollerProperties
 qscrollerproperties.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollerproperties.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStackedWidget
-qstackedwidget.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstackedwidget.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
 qwidget.h

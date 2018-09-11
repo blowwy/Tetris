@@ -11,7 +11,7 @@ find_package(Qt5Widgets REQUIRED)
 set(SOURCE main.cpp mainwindow.cpp Images.cpp)
 set(HEADER mainwindow.h Images.cpp)
 
-add_executable(Tetris main.cpp mainwindow.h mainwindow.cpp Images.cpp)
+add_executable(Tetris main.cpp mainwindow.h mainwindow.cpp Images.cpp MainWidget.cpp MainWidget.h)
 
 qt5_use_modules(Tetris Widgets)
 

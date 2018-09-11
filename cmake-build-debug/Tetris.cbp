@@ -122,6 +122,12 @@
 		<Unit filename="/home/boy/Tetris/Images.h">
 			<Option target="Tetris"/>
 		</Unit>
+		<Unit filename="/home/boy/Tetris/MainWidget.cpp">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/MainWidget.h">
+			<Option target="Tetris"/>
+		</Unit>
 		<Unit filename="/home/boy/Tetris/cmake-build-debug/Tetris_autogen/mocs_compilation.cpp">
 			<Option target="Tetris"/>
 		</Unit>
