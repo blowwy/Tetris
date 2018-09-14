@@ -1,0 +1,8 @@
+//
+// Created by boy on 13.09.18.
+//
+
+#ifndef TETRIS_DIRECTIONTYPE_H
+#define TETRIS_DIRECTIONTYPE_H
+
+#endif //TETRIS_DIRECTIONTYPE_H
