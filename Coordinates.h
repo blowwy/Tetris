@@ -8,13 +8,11 @@
 
 class Coordinates {
 public:
-    Coordinates();
-    void changeCoordinates(int x,int y);
+    explicit Coordinates(int tx,int ty);
+    void addOffset(int tx,int ty);
     int getx() const;
-    int & getx();
     int gety() const;
-    int & gety();
-    ~Coordinates();
+    ~Coordinates() = default;
 private:
     int x;
     int y;

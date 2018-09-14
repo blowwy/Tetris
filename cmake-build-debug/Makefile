@@ -136,6 +136,141 @@ Tetris_autogen/fast:
 	$(MAKE) -f CMakeFiles/Tetris_autogen.dir/build.make CMakeFiles/Tetris_autogen.dir/build
 .PHONY : Tetris_autogen/fast
 
+Block.o: Block.cpp.o
+
+.PHONY : Block.o
+
+# target to build an object file
+Block.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Block.cpp.o
+.PHONY : Block.cpp.o
+
+Block.i: Block.cpp.i
+
+.PHONY : Block.i
+
+# target to preprocess a source file
+Block.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Block.cpp.i
+.PHONY : Block.cpp.i
+
+Block.s: Block.cpp.s
+
+.PHONY : Block.s
+
+# target to generate assembly for a file
+Block.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Block.cpp.s
+.PHONY : Block.cpp.s
+
+BlockType.o: BlockType.cpp.o
+
+.PHONY : BlockType.o
+
+# target to build an object file
+BlockType.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/BlockType.cpp.o
+.PHONY : BlockType.cpp.o
+
+BlockType.i: BlockType.cpp.i
+
+.PHONY : BlockType.i
+
+# target to preprocess a source file
+BlockType.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/BlockType.cpp.i
+.PHONY : BlockType.cpp.i
+
+BlockType.s: BlockType.cpp.s
+
+.PHONY : BlockType.s
+
+# target to generate assembly for a file
+BlockType.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/BlockType.cpp.s
+.PHONY : BlockType.cpp.s
+
+Coordinates.o: Coordinates.cpp.o
+
+.PHONY : Coordinates.o
+
+# target to build an object file
+Coordinates.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Coordinates.cpp.o
+.PHONY : Coordinates.cpp.o
+
+Coordinates.i: Coordinates.cpp.i
+
+.PHONY : Coordinates.i
+
+# target to preprocess a source file
+Coordinates.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Coordinates.cpp.i
+.PHONY : Coordinates.cpp.i
+
+Coordinates.s: Coordinates.cpp.s
+
+.PHONY : Coordinates.s
+
+# target to generate assembly for a file
+Coordinates.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Coordinates.cpp.s
+.PHONY : Coordinates.cpp.s
+
+DirectionType.o: DirectionType.cpp.o
+
+.PHONY : DirectionType.o
+
+# target to build an object file
+DirectionType.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/DirectionType.cpp.o
+.PHONY : DirectionType.cpp.o
+
+DirectionType.i: DirectionType.cpp.i
+
+.PHONY : DirectionType.i
+
+# target to preprocess a source file
+DirectionType.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/DirectionType.cpp.i
+.PHONY : DirectionType.cpp.i
+
+DirectionType.s: DirectionType.cpp.s
+
+.PHONY : DirectionType.s
+
+# target to generate assembly for a file
+DirectionType.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/DirectionType.cpp.s
+.PHONY : DirectionType.cpp.s
+
+Field.o: Field.cpp.o
+
+.PHONY : Field.o
+
+# target to build an object file
+Field.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Field.cpp.o
+.PHONY : Field.cpp.o
+
+Field.i: Field.cpp.i
+
+.PHONY : Field.i
+
+# target to preprocess a source file
+Field.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Field.cpp.i
+.PHONY : Field.cpp.i
+
+Field.s: Field.cpp.s
+
+.PHONY : Field.s
+
+# target to generate assembly for a file
+Field.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/Field.cpp.s
+.PHONY : Field.cpp.s
+
 Images.o: Images.cpp.o
 
 .PHONY : Images.o
@@ -281,6 +416,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... Tetris"
 	@echo "... Tetris_autogen"
+	@echo "... Block.o"
+	@echo "... Block.i"
+	@echo "... Block.s"
+	@echo "... BlockType.o"
+	@echo "... BlockType.i"
+	@echo "... BlockType.s"
+	@echo "... Coordinates.o"
+	@echo "... Coordinates.i"
+	@echo "... Coordinates.s"
+	@echo "... DirectionType.o"
+	@echo "... DirectionType.i"
+	@echo "... DirectionType.s"
+	@echo "... Field.o"
+	@echo "... Field.i"
+	@echo "... Field.s"
 	@echo "... Images.o"
 	@echo "... Images.i"
 	@echo "... Images.s"

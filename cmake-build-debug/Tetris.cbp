@@ -116,6 +116,36 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/boy/Tetris/Block.cpp">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/Block.h">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/BlockType.cpp">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/BlockType.h">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/Coordinates.cpp">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/Coordinates.h">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/DirectionType.cpp">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/DirectionType.h">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/Field.cpp">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/Field.h">
+			<Option target="Tetris"/>
+		</Unit>
 		<Unit filename="/home/boy/Tetris/Images.cpp">
 			<Option target="Tetris"/>
 		</Unit>

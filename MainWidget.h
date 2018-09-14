@@ -8,6 +8,9 @@
 #include <QtWidgets/QWidget>
 #include <QPushButton>
 #include <QtWidgets/QHBoxLayout>
+#include <QKeyEvent>
+
+#include "Field.h"
 
 class MainWidget : public QWidget{
     Q_OBJECT;
@@ -17,6 +20,10 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *event) override;
+    void keyPressEvent(QKeyEvent *event) override;
+private:
+    QImage getFieldImage();
+    Field *gameField;
 };
 
 #endif //TETRIS_MAINWIDGET_H

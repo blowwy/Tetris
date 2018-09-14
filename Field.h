@@ -7,23 +7,26 @@
 
 
 #include "Block.h"
+#include <QImage>
 
-const unsigned int WIDTH = 10;
-const unsigned int HEIGH = 20;
+const int WIDTH = 10;
+const int HEIGH = 20;
 
 class Field {
 
 public:
-    Field();
+    explicit Field();
     void changeField();
     void moveBlock(MoveType type);
-    void TurnBlock();
+    void TurnBlock(int turnTo);
+    Block * getBlock();
     ~Field();
 
 private:
-    char field[HEIGH][WIDTH];
+    void offset(int & movex,int & movey,MoveType type);
+    bool checkCollisions(int movex,int movey,int turnTo);
+    int field[HEIGH][WIDTH];
     Block *block;
-
 };
 
 

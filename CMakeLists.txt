@@ -8,10 +8,11 @@ set(CMAKE_AUTOUIC ON)
 
 find_package(Qt5Widgets REQUIRED)
 
-set(SOURCE main.cpp mainwindow.cpp Images.cpp)
-set(HEADER mainwindow.h Images.cpp)
+set(SOURCE main.cpp mainwindow.cpp Images.cpp Block.cpp Field.cpp Coordinates.cpp)
+set(HEADER mainwindow.h Images.cpp DirectionType.h BlockType.h MoveType.h Field.h Coordinates.h)
 
-add_executable(Tetris main.cpp mainwindow.h mainwindow.cpp Images.cpp MainWidget.cpp MainWidget.h)
+add_executable(Tetris main.cpp Block.cpp Field.cpp mainwindow.cpp Images.cpp
+        MainWidget.cpp BlockType.cpp DirectionType.cpp Coordinates.cpp)
 
 qt5_use_modules(Tetris Widgets)
 

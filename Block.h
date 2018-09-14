@@ -9,19 +9,23 @@
 #include "Coordinates.h"
 #include "BlockType.h"
 #include "MoveType.h"
+#include "DirectionType.h"
 
 class Block {
 
 public:
-    Block(BlockType type);
-    Coordinates * getCoords() const;
-    bool & getCollision();
-    bool getCollision() const;
+    explicit Block(BlockType type);
+    BlockType getBlockType() ;
+    void setDirectionType(DirectionType dirType);
+    DirectionType getDirectionType() ;
+    Coordinates & getBlockMainCoordinate();
+    Coordinates & getBlockCoordinate(int i,int j,int k);
     ~Block();
 private:
-    Coordinates *coords;
-    bool collision = false;
+    Coordinates *blockCoords[7][4][4];  //type|derction|block
+    BlockType blockType;
+    DirectionType directionType;
+    Coordinates *mainCoord;
 };
-
 
 #endif //UNTITLED_BLOCK_H
