@@ -192,6 +192,7 @@ CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../Images.h
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../MainWidget.cpp
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../MainWidget.h
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../MoveType.h
+CMakeFiles/Tetris.dir/MainWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QCoreApplication
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
@@ -651,6 +652,7 @@ CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: Tetris_autogen/EWIE
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: Tetris_autogen/EWIEGA46WW/moc_mainwindow.cpp
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: Tetris_autogen/mocs_compilation.cpp
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: ../mainwindow.h
+CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
@@ -665,6 +667,7 @@ CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
@@ -776,6 +779,7 @@ CMakeFiles/Tetris.dir/main.cpp.o: ../MainWidget.h
 CMakeFiles/Tetris.dir/main.cpp.o: ../MoveType.h
 CMakeFiles/Tetris.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Tetris.dir/main.cpp.o: ../mainwindow.h
+CMakeFiles/Tetris.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
 CMakeFiles/Tetris.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
 CMakeFiles/Tetris.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
 CMakeFiles/Tetris.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins
@@ -1231,6 +1235,7 @@ CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../MainWidget.h
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../MoveType.h
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../mainwindow.cpp
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../mainwindow.h
+CMakeFiles/Tetris.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QCoreApplication
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QList

@@ -22,7 +22,6 @@ QImage & Images::get(const QString &imageName){
 void Images::load() {
     if (loaded)
         return;
-    imageStore.insert("background",QImage("/home/boy/Tetris/pictures/tetris_background.jpg").scaled(300,480));
     imageStore.insert("piece",QImage("/home/boy/Tetris/pictures/piece.jpg").scaled(24,24));
     loaded = true;
 }

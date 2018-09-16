@@ -16,8 +16,10 @@ class Field {
 
 public:
     explicit Field();
-    void changeField();
-    void moveBlock(MoveType type);
+    void getTypeNDirection(int & i,int & j,int turn);
+    int moveBlock(MoveType type);
+    void getBlockXY(int &x ,int &y ,int movex,int movey,int i,int j,int k);
+    int getCellColour(int x,int y);
     void TurnBlock(int turnTo);
     Block * getBlock();
     ~Field();
@@ -25,7 +27,9 @@ public:
 private:
     void offset(int & movex,int & movey,MoveType type);
     bool checkCollisions(int movex,int movey,int turnTo);
-    int field[HEIGH][WIDTH];
+    int fixBlock();
+    void deleteLine(int y);
+    int ** field;
     Block *block;
 };
 

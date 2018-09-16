@@ -193,6 +193,7 @@ CMakeFiles/Tetris.dir/MainWidget.cpp.o
  /home/boy/Tetris/MainWidget.cpp
  /home/boy/Tetris/MainWidget.h
  /home/boy/Tetris/MoveType.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QCoreApplication
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
@@ -652,6 +653,7 @@ CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o
  /home/boy/Tetris/cmake-build-debug/Tetris_autogen/EWIEGA46WW/moc_mainwindow.cpp
  /home/boy/Tetris/cmake-build-debug/Tetris_autogen/mocs_compilation.cpp
  /home/boy/Tetris/mainwindow.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
@@ -666,6 +668,7 @@ CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
@@ -777,6 +780,7 @@ CMakeFiles/Tetris.dir/main.cpp.o
  /home/boy/Tetris/MoveType.h
  /home/boy/Tetris/main.cpp
  /home/boy/Tetris/mainwindow.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins
@@ -1232,6 +1236,7 @@ CMakeFiles/Tetris.dir/mainwindow.cpp.o
  /home/boy/Tetris/MoveType.h
  /home/boy/Tetris/mainwindow.cpp
  /home/boy/Tetris/mainwindow.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QCoreApplication
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList

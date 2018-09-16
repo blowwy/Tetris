@@ -12,6 +12,7 @@ MainWidget::MainWidget(QWidget *parent) : QWidget(parent){
     pictures.load();
     gameField = new Field();
     this->setFocusPolicy(Qt::StrongFocus);
+    timer.start(5,this);
 }
 
 MainWidget::~MainWidget() {
@@ -29,16 +30,23 @@ void MainWidget::paintEvent(QPaintEvent *event) {
 
 
 QImage MainWidget::getFieldImage() {
-    QImage image(300,480,QImage::Format_ARGB32);
+    QImage image(240,480,QImage::Format_ARGB32);
     image.fill(0);
     QPainter painter(&image);
-    int i = static_cast<int>(gameField->getBlock()->getBlockType());
-    int j = static_cast<int>(gameField->getBlock()->getDirectionType());
+    for (int ii = 0;ii < HEIGH;ii++) {
+        for (int jj = 0; jj < WIDTH; jj++) {
+            int tmp = gameField->getCellColour(ii,jj);
+            if (tmp)
+                painter.drawImage(jj * 24, ii * 24, pictures.get("piece"));
+        }
+    }
+    int i = 0;
+    int j = 0;
+    gameField->getTypeNDirection(i,j,0);
     for (int k = 0;k < 4;k++) {
-        int x = gameField->getBlock()->getBlockMainCoordinate().getx() +
-                gameField->getBlock()->getBlockCoordinate(i, j, k).getx();
-        int y = gameField->getBlock()->getBlockMainCoordinate().gety() +
-                gameField->getBlock()->getBlockCoordinate(i, j, k).gety();
+        int x = 0;
+        int y = 0;
+        gameField->getBlockXY(x,y,0,0,i,j,k);
         if (x >= 0 && x < WIDTH && y >= 0 && y < HEIGH)
             painter.drawImage(x*24,y*24,pictures.get("piece"));
     }
@@ -49,17 +57,18 @@ QImage MainWidget::getFieldImage() {
 
 void MainWidget::keyPressEvent(QKeyEvent *event) {
     QWidget::keyPressEvent(event);
+    int gameStatus = 0;
     switch (event->key() ){
         case Qt::Key_D  :{
-            gameField->moveBlock(MoveType::RIGHT);
+            gameStatus = gameField->moveBlock(MoveType::RIGHT);
             break;
         }
         case Qt::Key_S: {
-            gameField->moveBlock(MoveType::DOWN);
+            gameStatus = gameField->moveBlock(MoveType::DOWN);
             break;
         }
         case Qt::Key_A: {
-            gameField->moveBlock(MoveType::LEFT);
+            gameStatus = gameField->moveBlock(MoveType::LEFT);
             break;
         }
         case Qt::Key_Right : {
@@ -69,7 +78,25 @@ void MainWidget::keyPressEvent(QKeyEvent *event) {
         case Qt::Key_Left : {
             gameField->TurnBlock(-1);
         }
-
+        default:{
+            gameStatus = 0;
+        }
     }
+    if (gameStatus){
+        delete gameField;
+        gameField = new Field;
+    }
+    this->repaint();
+}
+
+void MainWidget::timerEvent(QTimerEvent *event) {
+    QObject::timerEvent(event);
+    int gameStatus = 0;
+    gameStatus = gameField->moveBlock(MoveType::DOWN);
+    if (gameStatus){
+        delete gameField;
+        gameField = new Field;
+    }
+    timer.start(500,this);
     this->repaint();
 }
