@@ -121,7 +121,6 @@ Block::Block(BlockType type) : blockType(type),directionType(DirectionType::nort
 
 }
 
-
 Block::~Block() {
    for (auto &blockCoord : blockCoords) {
         for (auto &j : blockCoord) {
@@ -134,7 +133,7 @@ Block::~Block() {
 
 }
 
-BlockType Block::getBlockType(){
+BlockType Block::getType(){
     return blockType;
 }
 
@@ -142,11 +141,11 @@ DirectionType Block::getDirectionType(){
     return directionType;
 }
 
-Coordinates &Block::getBlockMainCoordinate(){
+Coordinates &Block::getMainCoordinate(){
     return *mainCoord;
 }
 
- Coordinates &Block::getBlockCoordinate(int i, int j, int k){
+ Coordinates &Block::getCoordinate(int i, int j, int k){
     return *blockCoords[i][j][k];
 }
 

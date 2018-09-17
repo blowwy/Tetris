@@ -12,7 +12,7 @@ MainWidget::MainWidget(QWidget *parent) : QWidget(parent){
     pictures.load();
     gameField = new Field();
     this->setFocusPolicy(Qt::StrongFocus);
-    timer.start(5,this);
+    timer.start(500,this);
 }
 
 MainWidget::~MainWidget() {
@@ -22,7 +22,7 @@ MainWidget::~MainWidget() {
 void MainWidget::paintEvent(QPaintEvent *event) {
     Q_UNUSED(event) ;
     QPainter painter(this);
-    painter.drawLine(240,0,240,480);
+    painter.drawLine(FIELD_APP_WIDTH,0,FIELD_APP_WIDTH,FIELD_APP_HEIGH);
     QImage image = getFieldImage();
     painter.drawImage(0,0,image);
 }
@@ -30,25 +30,25 @@ void MainWidget::paintEvent(QPaintEvent *event) {
 
 
 QImage MainWidget::getFieldImage() {
-    QImage image(240,480,QImage::Format_ARGB32);
+    QImage image(FIELD_APP_WIDTH,FIELD_APP_HEIGH,QImage::Format_ARGB32);
     image.fill(0);
     QPainter painter(&image);
-    for (int ii = 0;ii < HEIGH;ii++) {
-        for (int jj = 0; jj < WIDTH; jj++) {
-            int tmp = gameField->getCellColour(ii,jj);
+    for (int i = 0;i < FIELD_HEIGH;i++) {
+        for (int j = 0; j < FIELD_WIDTH; j++) {
+            int tmp = gameField->getCellColour(i,j);
             if (tmp)
-                painter.drawImage(jj * 24, ii * 24, pictures.get("piece"));
+                painter.drawImage(j * CELL_WIDTH, i * CELL_HEIGH, pictures.get("piece"));
         }
     }
     int i = 0;
     int j = 0;
-    gameField->getTypeNDirection(i,j,0);
-    for (int k = 0;k < 4;k++) {
+    gameField->getBlockTypeNDirection(i, j, 0);
+    for (int k = 0;k < PIECES_NUM;k++) {
         int x = 0;
         int y = 0;
         gameField->getBlockXY(x,y,0,0,i,j,k);
-        if (x >= 0 && x < WIDTH && y >= 0 && y < HEIGH)
-            painter.drawImage(x*24,y*24,pictures.get("piece"));
+        if (x >= 0 && x < FIELD_WIDTH && y >= 0 && y < FIELD_HEIGH)
+            painter.drawImage(x * CELL_WIDTH,y * CELL_HEIGH,pictures.get("piece"));
     }
     return image;
 

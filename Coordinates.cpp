@@ -14,7 +14,6 @@ int Coordinates::gety() const{
     return y;
 }
 
-
 void Coordinates::addOffset(int tx, int ty) {
     x += tx;
     y += ty;

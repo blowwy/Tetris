@@ -32,24 +32,6 @@ Block.h
 QImage
 -
 
-/home/boy/Tetris/Images.h
-QMap
--
-QString
--
-QImage
--
-
-/home/boy/Tetris/MainWidget.cpp
-MainWidget.h
-/home/boy/Tetris/MainWidget.h
-Images.h
-/home/boy/Tetris/Images.h
-QtWidgets
--
-QCoreApplication
--
-
 /home/boy/Tetris/MainWidget.h
 QtWidgets/QWidget
 -
@@ -66,6 +48,52 @@ Field.h
 
 /home/boy/Tetris/MoveType.h
 
+/home/boy/Tetris/cmake-build-debug/Tetris_autogen/EWIEGA46WW/moc_MainWidget.cpp
+../../../MainWidget.h
+/home/boy/Tetris/MainWidget.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/boy/Tetris/cmake-build-debug/Tetris_autogen/EWIEGA46WW/moc_mainwindow.cpp
+../../../mainwindow.h
+/home/boy/Tetris/mainwindow.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/boy/Tetris/cmake-build-debug/Tetris_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_MainWidget.cpp
+/home/boy/Tetris/cmake-build-debug/Tetris_autogen/EWIEGA46WW/moc_MainWidget.cpp
+EWIEGA46WW/moc_mainwindow.cpp
+/home/boy/Tetris/cmake-build-debug/Tetris_autogen/EWIEGA46WW/moc_mainwindow.cpp
+
+/home/boy/Tetris/main.cpp
+QtWidgets
+-
+QtCore/QObject
+-
+mainwindow.h
+/home/boy/Tetris/mainwindow.h
+
+/home/boy/Tetris/mainwindow.cpp
+mainwindow.h
+/home/boy/Tetris/mainwindow.h
+QtWidgets
+-
+QCoreApplication
+-
+
+/home/boy/Tetris/mainwindow.h
+QMainWindow
+-
+QPushButton
+-
+MainWidget.h
+/home/boy/Tetris/MainWidget.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QBasicTimer
 qbasictimer.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
@@ -81,10 +109,6 @@ qcoreevent.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
 qlist.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QMap
-qmap.h
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins
 qmargins.h
@@ -121,10 +145,6 @@ qsize.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QSizeF
 qsize.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QString
-qstring.h
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QStringList
 qstringlist.h
@@ -3097,6 +3117,10 @@ qboxlayout.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout
 qlayout.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
+qmainwindow.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 qpushbutton.h

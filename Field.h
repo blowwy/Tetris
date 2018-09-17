@@ -16,18 +16,20 @@ class Field {
 
 public:
     explicit Field();
-    void getTypeNDirection(int & i,int & j,int turn);
     int moveBlock(MoveType type);
-    void getBlockXY(int &x ,int &y ,int movex,int movey,int i,int j,int k);
-    int getCellColour(int x,int y);
+    int getCellColour(int x,int y) const;
+    void getBlockTypeNDirection(int &i, int &j, int turn) const;
+    void getBlockXY(int &x ,int &y ,int movex,int movey,int i,int j,int k) const;
     void TurnBlock(int turnTo);
-    Block * getBlock();
+    Block * getBlock() const;
     ~Field();
 
 private:
-    void offset(int & movex,int & movey,MoveType type);
-    bool checkCollisions(int movex,int movey,int turnTo);
+    bool isPieceInside(int x,int y) const;
+    bool checkCollisions(int movex,int movey,int turnTo) const;
     int fixBlock();
+    int deleteCompletedLines();
+    void offset(int & movex,int & movey,MoveType type) const;
     void deleteLine(int y);
     int ** field;
     Block *block;

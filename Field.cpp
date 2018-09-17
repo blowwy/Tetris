@@ -6,17 +6,17 @@
 #include "MoveType.h"
 
 
-void Field::getTypeNDirection(int & i,int & j,int turn = 0){
-    i = static_cast<int>(getBlock()->getBlockType());
+void Field::getBlockTypeNDirection(int &i, int &j, int turn = 0) const{
+    i = static_cast<int>(getBlock()->getType());
     DirectionType tmp = getBlock()->getDirectionType();
     if (turn == 1) ++tmp;
     if (turn == -1) --tmp;
     j = static_cast<int>(tmp);
 }
 
-void Field::getBlockXY(int &x, int &y, int movex, int movey,int i,int j,int k) {
-    x = getBlock()->getBlockMainCoordinate().getx() + movex + getBlock()->getBlockCoordinate(i,j,k).getx();
-    y = getBlock()->getBlockMainCoordinate().gety() + movey + getBlock()->getBlockCoordinate(i,j,k).gety();
+void Field::getBlockXY(int &x, int &y, int movex, int movey,int i,int j,int k) const{
+    x = getBlock()->getMainCoordinate().getx() + movex + getBlock()->getCoordinate(i, j, k).getx();
+    y = getBlock()->getMainCoordinate().gety() + movey + getBlock()->getCoordinate(i, j, k).gety();
 }
 
 
@@ -24,17 +24,17 @@ void Field::getBlockXY(int &x, int &y, int movex, int movey,int i,int j,int k) {
     method will return true, on other hand it will return false;
  */
 
-bool Field::checkCollisions(int movex = 0,int movey = 0,int turnTo = 0){
+bool Field::checkCollisions(int movex = 0,int movey = 0,int turnTo = 0) const{
     bool canMove = true;
     int i = 0;
     int j = 0;
-    getTypeNDirection(i,j,turnTo);
-    for (int k = 0;k < 4 && canMove;k++){
+    getBlockTypeNDirection(i, j, turnTo);
+    for (int k = 0;k < PIECES_NUM && canMove;k++){
         int x = 0;
         int y = 0;
         getBlockXY(x,y,movex,movey,i,j,k);
-        if ((y >= HEIGH || x >= WIDTH || x < 0)  ||
-            ((x >= 0 && y >= 0 && y <= HEIGH && x <= WIDTH && field[y][x])))
+        if ((!isPieceInside(x,y) && y >= 0) ||
+            (isPieceInside(x,y) && field[y][x]))
                 canMove = false;
     }
     return canMove;
@@ -43,7 +43,7 @@ bool Field::checkCollisions(int movex = 0,int movey = 0,int turnTo = 0){
 /*  calculation offset of both sides when trying to move block
     move right -> x = 1, move left -> x = -1,move down -> y = 1;
   */
-void Field::offset(int & movex,int & movey,MoveType type){
+void Field::offset(int & movex,int & movey,MoveType type) const{
     if (type == MoveType::DOWN) movey = 1;
     else if (type == MoveType::LEFT) movex = -1;
     else movex = 1;
@@ -52,13 +52,13 @@ void Field::offset(int & movex,int & movey,MoveType type){
 /*
     move block to side wich user wants on his field
 */
-int Field::moveBlock(MoveType type) {
+int Field::moveBlock(MoveType type){
     int gamestatus = 0;
     int movex = 0;
     int movey = 0;
     offset(movex,movey,type);
     if (checkCollisions(movex,movey)) {
-        block->getBlockMainCoordinate().addOffset(movex, movey);
+        block->getMainCoordinate().addOffset(movex, movey);
     }
     else if (type == MoveType::DOWN){
         gamestatus = fixBlock();
@@ -95,41 +95,29 @@ Field::~Field() {
     delete [] field;
 }
 
-Block *Field::getBlock(){
+Block *Field::getBlock() const{
     return block;
 }
 
-int Field::getCellColour(int x, int y) {
+int Field::getCellColour(int x, int y) const{
     return field[x][y];
 }
 
 void Field::deleteLine(int y) {
     for (int i = y;i > 0;i--)
         std::swap(field[i],field[i - 1]);
-
 }
 
-
-int Field::fixBlock() {
-    int i = 0;
-    int j = 0;
-    getTypeNDirection(i, j, 0);
-    for (int k = 0; k < 4; k++) {
-        int x = 0;
-        int y = 0;
-        getBlockXY(x, y, 0, 0, i, j, k);
-        if (y < HEIGH && x < WIDTH && x >= 0 && y >= 0)
-            field[y][x] = 1;
-    }
-    i = HEIGH - 1;
+int Field::deleteCompletedLines(){
+    int i = HEIGH - 1;
     while (i >= 0) {
         int count = 0;
-        for (j = 0; j < WIDTH; j++) {
+        for (int j = 0; j < WIDTH; j++) {
             if (field[i][j])
                 count++;
         }
         if (count == WIDTH) {
-            for (j = 0; j < WIDTH; j++) {
+            for (int j = 0; j < WIDTH; j++) {
                 field[i][j] = 0;
             }
             deleteLine(i);
@@ -141,4 +129,22 @@ int Field::fixBlock() {
         }
     }
     return 0;
+}
+
+int Field::fixBlock(){
+    int i = 0;
+    int j = 0;
+    getBlockTypeNDirection(i, j, 0);
+    for (int k = 0; k < PIECES_NUM; k++) {
+        int x = 0;
+        int y = 0;
+        getBlockXY(x, y, 0, 0, i, j, k);
+        if (isPieceInside(x,y))
+            field[y][x] = 1;
+    }
+    return deleteCompletedLines();
+}
+
+bool Field::isPieceInside(int x, int y) const {
+    return y < HEIGH && x < WIDTH && x >= 0 && y >= 0;
 }

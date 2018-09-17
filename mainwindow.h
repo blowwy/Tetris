@@ -9,20 +9,13 @@
 #include <QPushButton>
 #include "MainWidget.h"
 
-
-namespace Ui{
-    class MainWindow;
-}
-
 class MainWindow : public QMainWindow{
 Q_OBJECT
 public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow() override;
+    explicit MainWindow(QWidget *parent = nullptr);
 private slots:
     void handlePlayButton();
 private:
-    QPushButton *buttons[2];
     QWidget *menuWidget;
     MainWidget *mainWidget;
 };
