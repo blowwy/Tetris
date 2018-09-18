@@ -7,6 +7,7 @@
 
 #include <QMap>
 #include <QString>
+#include "ColorType.h"
 #include <QImage>
 
 int const FIELD_APP_HEIGH = 480;
@@ -20,11 +21,11 @@ int const CELL_WIDTH = FIELD_APP_WIDTH / FIELD_WIDTH;
 class Images{
 public:
     Images();
-    QImage & get(const QString & imageName);
+    QImage & get(ColorType cType);
     void load();
 private:
     bool loaded;
-    QMap<QString,QImage> imageStore;
+    QMap<ColorType,QImage> imageStore;
 };
 
 extern Images pictures;

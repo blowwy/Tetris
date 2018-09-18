@@ -4,12 +4,16 @@
 CMakeFiles/Tetris.dir/Block.cpp.o: ../Block.cpp
 CMakeFiles/Tetris.dir/Block.cpp.o: ../Block.h
 CMakeFiles/Tetris.dir/Block.cpp.o: ../BlockType.h
+CMakeFiles/Tetris.dir/Block.cpp.o: ../ColorType.h
 CMakeFiles/Tetris.dir/Block.cpp.o: ../Coordinates.h
 CMakeFiles/Tetris.dir/Block.cpp.o: ../DirectionType.h
 CMakeFiles/Tetris.dir/Block.cpp.o: ../MoveType.h
 
 CMakeFiles/Tetris.dir/BlockType.cpp.o: ../BlockType.cpp
 CMakeFiles/Tetris.dir/BlockType.cpp.o: ../BlockType.h
+
+CMakeFiles/Tetris.dir/ColorType.cpp.o: ../ColorType.cpp
+CMakeFiles/Tetris.dir/ColorType.cpp.o: ../ColorType.h
 
 CMakeFiles/Tetris.dir/Coordinates.cpp.o: ../Coordinates.cpp
 CMakeFiles/Tetris.dir/Coordinates.cpp.o: ../Coordinates.h
@@ -19,6 +23,7 @@ CMakeFiles/Tetris.dir/DirectionType.cpp.o: ../DirectionType.h
 
 CMakeFiles/Tetris.dir/Field.cpp.o: ../Block.h
 CMakeFiles/Tetris.dir/Field.cpp.o: ../BlockType.h
+CMakeFiles/Tetris.dir/Field.cpp.o: ../ColorType.h
 CMakeFiles/Tetris.dir/Field.cpp.o: ../Coordinates.h
 CMakeFiles/Tetris.dir/Field.cpp.o: ../DirectionType.h
 CMakeFiles/Tetris.dir/Field.cpp.o: ../Field.cpp
@@ -97,6 +102,7 @@ CMakeFiles/Tetris.dir/Field.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtran
 CMakeFiles/Tetris.dir/Field.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
 CMakeFiles/Tetris.dir/Field.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
 
+CMakeFiles/Tetris.dir/Images.cpp.o: ../ColorType.h
 CMakeFiles/Tetris.dir/Images.cpp.o: ../Images.cpp
 CMakeFiles/Tetris.dir/Images.cpp.o: ../Images.h
 CMakeFiles/Tetris.dir/Images.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap
@@ -185,6 +191,7 @@ CMakeFiles/Tetris.dir/Images.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwin
 
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../Block.h
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../BlockType.h
+CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../ColorType.h
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../Coordinates.h
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../DirectionType.h
 CMakeFiles/Tetris.dir/MainWidget.cpp.o: ../Field.h
@@ -643,6 +650,7 @@ CMakeFiles/Tetris.dir/MainWidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidg
 
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: ../Block.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: ../BlockType.h
+CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: ../ColorType.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: ../Coordinates.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: ../DirectionType.h
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: ../Field.h
@@ -772,6 +780,7 @@ CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o: /usr/include/x86_64
 
 CMakeFiles/Tetris.dir/main.cpp.o: ../Block.h
 CMakeFiles/Tetris.dir/main.cpp.o: ../BlockType.h
+CMakeFiles/Tetris.dir/main.cpp.o: ../ColorType.h
 CMakeFiles/Tetris.dir/main.cpp.o: ../Coordinates.h
 CMakeFiles/Tetris.dir/main.cpp.o: ../DirectionType.h
 CMakeFiles/Tetris.dir/main.cpp.o: ../Field.h
@@ -1228,6 +1237,7 @@ CMakeFiles/Tetris.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qw
 
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../Block.h
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../BlockType.h
+CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../ColorType.h
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../Coordinates.h
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../DirectionType.h
 CMakeFiles/Tetris.dir/mainwindow.cpp.o: ../Field.h

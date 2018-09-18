@@ -4,6 +4,7 @@
 
 #include "MainWidget.h"
 #include "Images.h"
+#include "ColorType.h"
 
 #include <QtWidgets>
 #include <QCoreApplication>
@@ -35,9 +36,9 @@ QImage MainWidget::getFieldImage() {
     QPainter painter(&image);
     for (int i = 0;i < FIELD_HEIGH;i++) {
         for (int j = 0; j < FIELD_WIDTH; j++) {
-            int tmp = gameField->getCellColour(i,j);
-            if (tmp)
-                painter.drawImage(j * CELL_WIDTH, i * CELL_HEIGH, pictures.get("piece"));
+            ColorType tmp = gameField->getCellColour(i,j);
+            if (tmp != ColorType::inv)
+                drawPiece(&painter,j,i,tmp);
         }
     }
     int i = 0;
@@ -48,7 +49,7 @@ QImage MainWidget::getFieldImage() {
         int y = 0;
         gameField->getBlockXY(x,y,0,0,i,j,k);
         if (x >= 0 && x < FIELD_WIDTH && y >= 0 && y < FIELD_HEIGH)
-            painter.drawImage(x * CELL_WIDTH,y * CELL_HEIGH,pictures.get("piece"));
+            drawPiece(&painter,x,y,gameField->getBlock()->getColorType());
     }
     return image;
 
@@ -99,4 +100,8 @@ void MainWidget::timerEvent(QTimerEvent *event) {
     }
     timer.start(500,this);
     this->repaint();
+}
+
+void MainWidget::drawPiece(QPainter * painter,int x, int y,ColorType color) const{
+    painter->drawImage(x * CELL_WIDTH,y * CELL_HEIGH,pictures.get(color));
 }

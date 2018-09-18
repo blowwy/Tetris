@@ -12,7 +12,7 @@ set(SOURCE main.cpp mainwindow.cpp Images.cpp Block.cpp Field.cpp Coordinates.cp
 set(HEADER mainwindow.h Images.cpp DirectionType.h BlockType.h MoveType.h Field.h Coordinates.h)
 
 add_executable(Tetris main.cpp Block.cpp Field.cpp mainwindow.cpp Images.cpp
-        MainWidget.cpp BlockType.cpp DirectionType.cpp Coordinates.cpp)
+        MainWidget.cpp BlockType.cpp DirectionType.cpp Coordinates.cpp ColorType.h ColorType.cpp)
 
 qt5_use_modules(Tetris Widgets)
 

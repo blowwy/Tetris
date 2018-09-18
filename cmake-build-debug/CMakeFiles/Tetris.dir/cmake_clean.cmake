@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Tetris.dir/BlockType.cpp.o"
   "CMakeFiles/Tetris.dir/DirectionType.cpp.o"
   "CMakeFiles/Tetris.dir/Coordinates.cpp.o"
+  "CMakeFiles/Tetris.dir/ColorType.cpp.o"
   "CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o"
   "Tetris.pdb"
   "Tetris"

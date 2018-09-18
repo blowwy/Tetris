@@ -4,6 +4,7 @@
 
 #include "Field.h"
 #include "MoveType.h"
+#include "ColorType.h"
 
 
 void Field::getBlockTypeNDirection(int &i, int &j, int turn = 0) const{
@@ -34,7 +35,7 @@ bool Field::checkCollisions(int movex = 0,int movey = 0,int turnTo = 0) const{
         int y = 0;
         getBlockXY(x,y,movex,movey,i,j,k);
         if ((!isPieceInside(x,y) && y >= 0) ||
-            (isPieceInside(x,y) && field[y][x]))
+            (isPieceInside(x,y) && field[y][x] != ColorType::inv))
                 canMove = false;
     }
     return canMove;
@@ -63,7 +64,7 @@ int Field::moveBlock(MoveType type){
     else if (type == MoveType::DOWN){
         gamestatus = fixBlock();
         delete block;
-        block = new Block(randomBlockType());
+        block = new Block(randomBlockType(),randomColorType());
     }
     return gamestatus;
 }
@@ -77,13 +78,13 @@ void Field::TurnBlock(int turnTo) {
 }
 
 Field::Field() {
-    field = new int * [HEIGH];
+    field = new ColorType * [HEIGH];
     for (int i = 0;i < HEIGH;i++)
-        field[i] = new int [WIDTH];
-    block = new Block(randomBlockType());
+        field[i] = new ColorType [WIDTH];
+    block = new Block(randomBlockType(),randomColorType());
     for (int i = 0;i < HEIGH;i++){
         for (int j = 0;j < WIDTH;j++){
-            field[i][j] = 0;
+            field[i][j] = ColorType::inv;
         }
     }
 }
@@ -99,7 +100,7 @@ Block *Field::getBlock() const{
     return block;
 }
 
-int Field::getCellColour(int x, int y) const{
+ColorType Field::getCellColour(int x, int y) const{
     return field[x][y];
 }
 
@@ -113,12 +114,12 @@ int Field::deleteCompletedLines(){
     while (i >= 0) {
         int count = 0;
         for (int j = 0; j < WIDTH; j++) {
-            if (field[i][j])
+            if (field[i][j] != ColorType::inv)
                 count++;
         }
         if (count == WIDTH) {
             for (int j = 0; j < WIDTH; j++) {
-                field[i][j] = 0;
+                field[i][j] = ColorType::inv;
             }
             deleteLine(i);
         }
@@ -140,7 +141,7 @@ int Field::fixBlock(){
         int y = 0;
         getBlockXY(x, y, 0, 0, i, j, k);
         if (isPieceInside(x,y))
-            field[y][x] = 1;
+            field[y][x] = getBlock()->getColorType();
     }
     return deleteCompletedLines();
 }

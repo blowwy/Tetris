@@ -190,6 +190,33 @@ BlockType.cpp.s:
 	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/BlockType.cpp.s
 .PHONY : BlockType.cpp.s
 
+ColorType.o: ColorType.cpp.o
+
+.PHONY : ColorType.o
+
+# target to build an object file
+ColorType.cpp.o:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/ColorType.cpp.o
+.PHONY : ColorType.cpp.o
+
+ColorType.i: ColorType.cpp.i
+
+.PHONY : ColorType.i
+
+# target to preprocess a source file
+ColorType.cpp.i:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/ColorType.cpp.i
+.PHONY : ColorType.cpp.i
+
+ColorType.s: ColorType.cpp.s
+
+.PHONY : ColorType.s
+
+# target to generate assembly for a file
+ColorType.cpp.s:
+	$(MAKE) -f CMakeFiles/Tetris.dir/build.make CMakeFiles/Tetris.dir/ColorType.cpp.s
+.PHONY : ColorType.cpp.s
+
 Coordinates.o: Coordinates.cpp.o
 
 .PHONY : Coordinates.o
@@ -422,6 +449,9 @@ help:
 	@echo "... BlockType.o"
 	@echo "... BlockType.i"
 	@echo "... BlockType.s"
+	@echo "... ColorType.o"
+	@echo "... ColorType.i"
+	@echo "... ColorType.s"
 	@echo "... Coordinates.o"
 	@echo "... Coordinates.i"
 	@echo "... Coordinates.s"

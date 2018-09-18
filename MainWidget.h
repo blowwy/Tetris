@@ -23,6 +23,7 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
     void timerEvent(QTimerEvent *event) override;
 private:
+    void drawPiece(QPainter * const painter,int x,int y,ColorType cType) const;
     QImage getFieldImage();
     QBasicTimer timer;
     Field *gameField;

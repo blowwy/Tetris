@@ -5,12 +5,16 @@ CMakeFiles/Tetris.dir/Block.cpp.o
  /home/boy/Tetris/Block.cpp
  /home/boy/Tetris/Block.h
  /home/boy/Tetris/BlockType.h
+ /home/boy/Tetris/ColorType.h
  /home/boy/Tetris/Coordinates.h
  /home/boy/Tetris/DirectionType.h
  /home/boy/Tetris/MoveType.h
 CMakeFiles/Tetris.dir/BlockType.cpp.o
  /home/boy/Tetris/BlockType.cpp
  /home/boy/Tetris/BlockType.h
+CMakeFiles/Tetris.dir/ColorType.cpp.o
+ /home/boy/Tetris/ColorType.cpp
+ /home/boy/Tetris/ColorType.h
 CMakeFiles/Tetris.dir/Coordinates.cpp.o
  /home/boy/Tetris/Coordinates.cpp
  /home/boy/Tetris/Coordinates.h
@@ -20,6 +24,7 @@ CMakeFiles/Tetris.dir/DirectionType.cpp.o
 CMakeFiles/Tetris.dir/Field.cpp.o
  /home/boy/Tetris/Block.h
  /home/boy/Tetris/BlockType.h
+ /home/boy/Tetris/ColorType.h
  /home/boy/Tetris/Coordinates.h
  /home/boy/Tetris/DirectionType.h
  /home/boy/Tetris/Field.cpp
@@ -98,6 +103,7 @@ CMakeFiles/Tetris.dir/Field.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
 CMakeFiles/Tetris.dir/Images.cpp.o
+ /home/boy/Tetris/ColorType.h
  /home/boy/Tetris/Images.cpp
  /home/boy/Tetris/Images.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMap
@@ -186,6 +192,7 @@ CMakeFiles/Tetris.dir/Images.cpp.o
 CMakeFiles/Tetris.dir/MainWidget.cpp.o
  /home/boy/Tetris/Block.h
  /home/boy/Tetris/BlockType.h
+ /home/boy/Tetris/ColorType.h
  /home/boy/Tetris/Coordinates.h
  /home/boy/Tetris/DirectionType.h
  /home/boy/Tetris/Field.h
@@ -644,6 +651,7 @@ CMakeFiles/Tetris.dir/MainWidget.cpp.o
 CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o
  /home/boy/Tetris/Block.h
  /home/boy/Tetris/BlockType.h
+ /home/boy/Tetris/ColorType.h
  /home/boy/Tetris/Coordinates.h
  /home/boy/Tetris/DirectionType.h
  /home/boy/Tetris/Field.h
@@ -773,6 +781,7 @@ CMakeFiles/Tetris.dir/Tetris_autogen/mocs_compilation.cpp.o
 CMakeFiles/Tetris.dir/main.cpp.o
  /home/boy/Tetris/Block.h
  /home/boy/Tetris/BlockType.h
+ /home/boy/Tetris/ColorType.h
  /home/boy/Tetris/Coordinates.h
  /home/boy/Tetris/DirectionType.h
  /home/boy/Tetris/Field.h
@@ -1229,6 +1238,7 @@ CMakeFiles/Tetris.dir/main.cpp.o
 CMakeFiles/Tetris.dir/mainwindow.cpp.o
  /home/boy/Tetris/Block.h
  /home/boy/Tetris/BlockType.h
+ /home/boy/Tetris/ColorType.h
  /home/boy/Tetris/Coordinates.h
  /home/boy/Tetris/DirectionType.h
  /home/boy/Tetris/Field.h

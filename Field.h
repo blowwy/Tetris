@@ -17,7 +17,7 @@ class Field {
 public:
     explicit Field();
     int moveBlock(MoveType type);
-    int getCellColour(int x,int y) const;
+    ColorType getCellColour(int x,int y) const;
     void getBlockTypeNDirection(int &i, int &j, int turn) const;
     void getBlockXY(int &x ,int &y ,int movex,int movey,int i,int j,int k) const;
     void TurnBlock(int turnTo);
@@ -31,7 +31,7 @@ private:
     int deleteCompletedLines();
     void offset(int & movex,int & movey,MoveType type) const;
     void deleteLine(int y);
-    int ** field;
+    ColorType ** field;
     Block *block;
 };
 

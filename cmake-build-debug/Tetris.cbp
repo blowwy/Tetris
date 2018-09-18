@@ -128,6 +128,12 @@
 		<Unit filename="/home/boy/Tetris/BlockType.h">
 			<Option target="Tetris"/>
 		</Unit>
+		<Unit filename="/home/boy/Tetris/ColorType.cpp">
+			<Option target="Tetris"/>
+		</Unit>
+		<Unit filename="/home/boy/Tetris/ColorType.h">
+			<Option target="Tetris"/>
+		</Unit>
 		<Unit filename="/home/boy/Tetris/Coordinates.cpp">
 			<Option target="Tetris"/>
 		</Unit>

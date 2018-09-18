@@ -4,8 +4,8 @@
 
 #include "Block.h"
 
-Block::Block(BlockType type) : blockType(type),directionType(DirectionType::north)
-                    ,mainCoord(new Coordinates(5,-3)){
+Block::Block(BlockType bType,ColorType cType) : blockType(bType),directionType(DirectionType::north)
+        ,mainCoord(new Coordinates(5,-3)),color(cType){
     blockCoords[0][0][0] = new Coordinates(0,0);
     blockCoords[0][0][1] = new Coordinates(0,1);
     blockCoords[0][0][2] = new Coordinates(0,2);
@@ -133,11 +133,15 @@ Block::~Block() {
 
 }
 
-BlockType Block::getType(){
+BlockType Block::getType() const{
     return blockType;
 }
 
-DirectionType Block::getDirectionType(){
+ColorType Block::getColorType() const {
+    return color;
+}
+
+DirectionType Block::getDirectionType() const{
     return directionType;
 }
 

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/boy/Tetris/Block.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/Block.cpp.o"
   "/home/boy/Tetris/BlockType.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/BlockType.cpp.o"
+  "/home/boy/Tetris/ColorType.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/ColorType.cpp.o"
   "/home/boy/Tetris/Coordinates.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/Coordinates.cpp.o"
   "/home/boy/Tetris/DirectionType.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/DirectionType.cpp.o"
   "/home/boy/Tetris/Field.cpp" "/home/boy/Tetris/cmake-build-debug/CMakeFiles/Tetris.dir/Field.cpp.o"
