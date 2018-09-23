@@ -1,3 +1,5 @@
+#include <memory>
+
 //
 // Created by boy on 11.09.18.
 //
@@ -9,16 +11,12 @@
 #include <QtWidgets>
 #include <QCoreApplication>
 
-MainWidget::MainWidget(QWidget *parent) : QWidget(parent){
+MainWidget::MainWidget(QWidget *parent) : QWidget(parent),gameField(std::make_unique<Field>()){
     pictures.load();
-    gameField = new Field();
     this->setFocusPolicy(Qt::StrongFocus);
     timer.start(500,this);
 }
 
-MainWidget::~MainWidget() {
-    delete gameField;
-}
 
 void MainWidget::paintEvent(QPaintEvent *event) {
     Q_UNUSED(event) ;
@@ -56,6 +54,16 @@ QImage MainWidget::getFieldImage() {
 
 }
 
+void MainWidget::resetField(){
+    gameField = std::make_unique<Field>();
+}
+
+void MainWidget::checkGameStatus(int status){
+    if (status){
+        resetField();
+    }
+}
+
 void MainWidget::keyPressEvent(QKeyEvent *event) {
     QWidget::keyPressEvent(event);
     int gameStatus = 0;
@@ -83,10 +91,7 @@ void MainWidget::keyPressEvent(QKeyEvent *event) {
             gameStatus = 0;
         }
     }
-    if (gameStatus){
-        delete gameField;
-        gameField = new Field;
-    }
+    checkGameStatus(gameStatus);
     this->repaint();
 }
 
@@ -94,10 +99,7 @@ void MainWidget::timerEvent(QTimerEvent *event) {
     QObject::timerEvent(event);
     int gameStatus = 0;
     gameStatus = gameField->moveBlock(MoveType::DOWN);
-    if (gameStatus){
-        delete gameField;
-        gameField = new Field;
-    }
+    checkGameStatus(gameStatus);
     timer.start(500,this);
     this->repaint();
 }

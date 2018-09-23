@@ -4,6 +4,8 @@
 
 #include "Coordinates.h"
 
+Coordinates::Coordinates() : x(0),y(0) {}
+
 Coordinates::Coordinates(int tx,int ty) : x(tx),y(ty){}
 
 int Coordinates::getx() const {

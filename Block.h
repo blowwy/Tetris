@@ -24,15 +24,15 @@ public:
     ColorType getColorType() const;
     DirectionType getDirectionType() const;
     Coordinates & getMainCoordinate();
-    Coordinates & getCoordinate(int i, int j, int k);
+    const Coordinates & getCoordinate(int i, int j, int k) const;
     void setDirectionType(DirectionType dirType);
-    ~Block();
+    ~Block() = default;
 private:
     BlockType blockType;
     DirectionType directionType;
     ColorType color;
-    Coordinates *mainCoord;
-    Coordinates *blockCoords[DIRECTIONS_NUM][TYPES_NUM][PIECES_NUM]; //type|derction|block
+    Coordinates mainCoord;
+    Coordinates blockCoords[DIRECTIONS_NUM][TYPES_NUM][PIECES_NUM]; //type|derction|block
 };
 
 #endif //UNTITLED_BLOCK_H

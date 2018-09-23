@@ -5,9 +5,11 @@
 #ifndef UNTITLED_FIELD_H
 #define UNTITLED_FIELD_H
 
+#include <QImage>
+
+#include <memory>
 
 #include "Block.h"
-#include <QImage>
 
 const int WIDTH = 10;
 const int HEIGH = 20;
@@ -21,8 +23,8 @@ public:
     void getBlockTypeNDirection(int &i, int &j, int turn) const;
     void getBlockXY(int &x ,int &y ,int movex,int movey,int i,int j,int k) const;
     void TurnBlock(int turnTo);
-    Block * getBlock() const;
-    ~Field();
+    const Block * getBlock() const;
+    ~Field() = default;
 
 private:
     bool isPieceInside(int x,int y) const;
@@ -31,8 +33,8 @@ private:
     int deleteCompletedLines();
     void offset(int & movex,int & movey,MoveType type) const;
     void deleteLine(int y);
-    ColorType ** field;
-    Block *block;
+    ColorType field[HEIGH][WIDTH];
+    std::unique_ptr<Block> block;
 };
 
 

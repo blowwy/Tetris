@@ -16,8 +16,8 @@ void Field::getBlockTypeNDirection(int &i, int &j, int turn = 0) const{
 }
 
 void Field::getBlockXY(int &x, int &y, int movex, int movey,int i,int j,int k) const{
-    x = getBlock()->getMainCoordinate().getx() + movex + getBlock()->getCoordinate(i, j, k).getx();
-    y = getBlock()->getMainCoordinate().gety() + movey + getBlock()->getCoordinate(i, j, k).gety();
+    x = block->getMainCoordinate().getx() + movex + getBlock()->getCoordinate(i, j, k).getx();
+    y = block->getMainCoordinate().gety() + movey + getBlock()->getCoordinate(i, j, k).gety();
 }
 
 
@@ -63,8 +63,7 @@ int Field::moveBlock(MoveType type){
     }
     else if (type == MoveType::DOWN){
         gamestatus = fixBlock();
-        delete block;
-        block = new Block(randomBlockType(),randomColorType());
+        block = std::make_unique<Block>(randomBlockType(),randomColorType());
     }
     return gamestatus;
 }
@@ -77,27 +76,16 @@ void Field::TurnBlock(int turnTo) {
     }
 }
 
-Field::Field() {
-    field = new ColorType * [HEIGH];
-    for (int i = 0;i < HEIGH;i++)
-        field[i] = new ColorType [WIDTH];
-    block = new Block(randomBlockType(),randomColorType());
-    for (int i = 0;i < HEIGH;i++){
-        for (int j = 0;j < WIDTH;j++){
-            field[i][j] = ColorType::inv;
+Field::Field() : block(std::make_unique<Block>(randomBlockType(),randomColorType())) {
+    for (auto &i : field) {
+        for (auto &j : i) {
+            j = ColorType::inv;
         }
     }
 }
 
-Field::~Field() {
-    delete block;
-    for (int i = 0;i < HEIGH;i++)
-        delete [] field[i];
-    delete [] field;
-}
-
-Block *Field::getBlock() const{
-    return block;
+const Block * Field::getBlock() const{
+    return block.get();
 }
 
 ColorType Field::getCellColour(int x, int y) const{

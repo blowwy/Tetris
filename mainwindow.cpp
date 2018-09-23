@@ -21,11 +21,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent){
     QObject::connect(buttons[0],SIGNAL(released()),this,SLOT(handlePlayButton()));
     buttons[1] = new QPushButton("Quit");
     QObject::connect(buttons[1],SIGNAL(released()),qApp,SLOT(quit()));
+    menuWidget = new QWidget(this);
     auto * layout = new QHBoxLayout(menuWidget);
     layout->addWidget(buttons[0]);
     layout->addWidget(buttons[1]);
     layout->setMargin(geometry().width() / 4);
-    menuWidget = new QWidget(this);
     menuWidget->setLayout(layout);
     this->setCentralWidget(menuWidget);
 }
